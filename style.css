@@ -91,3 +91,101 @@ select {
 }
 
 /* CSS Reset end */
+
+.side-nav {
+  position: fixed;
+  width: 250px;
+  height: 100%;
+  border-right: 2px solid #e3e8f0;
+  background-color: #fdfdff;
+}
+
+.nav-logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+  padding-top: 30px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.nav-logo h1 {
+  font-size: 40px;
+  margin-left: 5px;
+  font-weight: 500;
+  color: #111;
+}
+
+.bloc-link {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  font-weight: 300;
+  color: #838f9f;
+  text-decoration: none;
+}
+
+.bloc-link:hover {
+  background: #f8f8f8;
+}
+
+.bloc-link img {
+  width: 20px;
+}
+
+.nav-links {
+  font-size: 16px;
+  margin-left: 12px;
+}
+
+.bloc-link.active {
+  background-color: #e9e9e9;
+}
+
+.bloc-link.active .nav-links {
+  color: #35b670;
+  font-weight: 500;
+}
+
+/* Main */
+
+.main-content {
+  padding: 30px;
+  margin-left: 250px;
+}
+
+.input-control {
+  max-width: 450px;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f4f4;
+  border-radius: 6px;
+}
+
+.input-control img {
+  width: 20px;
+  top: 2px;
+  position: relative;
+}
+
+.input-control input {
+  width: 100%;
+  font-size: 18px;
+  padding-left: 10px;
+  border: none;
+  color: #000;
+  background-color: #f4f4f4;
+  outline: none;
+}
+
+.input-control input::placeholder {
+  color: #838f9f;
+  font-size: 16px;
+}
+
+.section-title {
+  font-size: 25px;
+  margin: 20px 0;
+}
