@@ -46,3 +46,32 @@ function createUserList(array) {
     tableResults.appendChild(listItems);
   });
 }
+
+const searchInput = document.querySelector('#search');
+
+searchInput.addEventListener('input', filterData);
+
+function filterData(e) {
+  tableResults.textContent = '';
+  const searchedString = e.target.value.toLowerCase().replace(/\s/g, '');
+
+  const filteredArr = dataArray.filter((userData) =>
+    searchForOccurrences(userData),
+  );
+
+  function searchForOccurrences(userData) {
+    const searchTypes = {
+      firstName: userData.name.first.toLowerCase(),
+      lastName: userData.name.last.toLowerCase(),
+      firstAndLast: `${userData.name.first + userData.name.last}`.toLowerCase(),
+      LastAndFirst: `${userData.name.last + userData.name.first}`.toLowerCase(),
+    };
+    for (const prop in searchTypes) {
+      if (searchTypes[prop].includes(searchedString)) {
+        return true;
+      }
+    }
+  }
+
+  createUserList(filteredArr);
+}

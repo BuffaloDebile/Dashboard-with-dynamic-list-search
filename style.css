@@ -156,7 +156,6 @@ select {
 
 .input-control {
   max-width: 450px;
-  padding: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -168,12 +167,18 @@ select {
   width: 20px;
   top: 2px;
   position: relative;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+.input-control:focus-within {
+  outline: 1px solid #333;
 }
 
 .input-control input {
   width: 100%;
   font-size: 18px;
-  padding-left: 10px;
+  padding: 15px;
   border: none;
   color: #000;
   background-color: #f4f4f4;
